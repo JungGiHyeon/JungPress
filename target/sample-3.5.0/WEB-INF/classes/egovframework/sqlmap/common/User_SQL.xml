@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap>
+	<typeAlias alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+	
+	<insert id="commonUser.insertUser">
+		/* commonUser.insertUser - 사용자 정보 저장 */
+		INSERT INTO COMMON_USER(
+			USER_ID,
+			USER_PW,
+			USER_NAME,
+			ZIPCODE,
+			ADDR1,
+			ADDR2,
+			PHONE,
+			EMAIL_ID,
+			EMAIL_DOMAIN
+		) VALUES (
+			#userId#,
+			PASSWORD(#userPw#),
+			#userName#,
+			#zipcode#,
+			#addr1#,
+			#addr2#,
+			#phone#,
+			#emailId#,
+			#emailDomain#
+		)
+	</insert>
+	
+	<select id="commonUser.selectUser" resultClass="egovMap">
+		/* commonUser.selectUser - 사용자 정보 조회 */
+		SELECT	USER_ID,
+				USER_NAME,
+				ZIPCODE,
+				ADDR1,
+				ADDR2,
+				PHONE,
+				EMAIL_ID,
+				EMAIL_DOMAIN,
+				USER_CLASS
+		  FROM COMMON_USER
+		 WHERE USER_ID		= #userId#
+		   AND USER_PW		= PASSWORD(#userPw#)
+		   AND USER_CLASS	IN (#userClass#, 'SUPER')
+	</select>
+</sqlMap>

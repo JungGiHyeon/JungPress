@@ -1,4 +1,5 @@
 *.bak
 .classpath
 .project
-src/main/resources/egovframework/spring/context-datasource.xml
+context-datasource.xml
+.DS_Store

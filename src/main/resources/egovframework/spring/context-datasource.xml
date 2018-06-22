@@ -9,10 +9,10 @@
 
     <!-- Mysql -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="driverClassName"	value="com.mysql.jdbc.Driver"						/>
-        <property name="url"				value="jdbc:mysql://uj64-003.cafe24.com:3306"		/>
-        <property name="username"			value="gumeori2001"									/>
-        <property name="password"			value="Qksksk1@34"									/>
+        <property name="driverClassName"	value="com.mysql.jdbc.Driver"			/>
+        <property name="url"				value="jdbc:mysql:172.0.0.1:3306"	/>
+        <property name="username"			value="user"				/>
+        <property name="password"			value="password"			/>
     </bean>
     
     <!-- oraclec

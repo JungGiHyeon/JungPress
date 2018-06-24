@@ -57,8 +57,9 @@ public class AdminCommonLoginController {
        	
        	try {
        		Map userMap = commonUserService.selectUser(commandMap);
-       		
-       		log.debug("=========================================="	);
+
+       		log.debug("============================================");
+       		log.debug("============================================");
        		log.debug("== userEmail	: " + userMap.get("userEmail")	);
        		log.debug("== userName	: " + userMap.get("userName")	);
        		log.debug("== zipcode	: " + userMap.get("zipcode")	);
@@ -66,7 +67,8 @@ public class AdminCommonLoginController {
        		log.debug("== addr2		: " + userMap.get("addr2")		);
        		log.debug("== phone		: " + userMap.get("phone")		);
        		log.debug("== userClass	: " + userMap.get("userClass")	);
-       		log.debug("=========================================="	);
+       		log.debug("============================================");
+       		log.debug("============================================");
        		
    			if ("".equals(userMap.get("userEmail").toString()) || userMap.get("userEmail").toString() == null) {
        	        model.addAttribute("resultMsg",	"로그인 정보가 없습니다.");

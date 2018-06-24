@@ -1,5 +1,6 @@
 *.bak
 .classpath
 .project
-context-datasource.xml
+.springBeans
 .DS_Store
+context-datasource.xml

@@ -34,9 +34,9 @@ public class AdminCommonLoginController {
      */
 	@RequestMapping(value={"/admin/common/login/login.do"})
 	public String login(HttpServletRequest request, ModelMap model, @CommandMap Map commandMap) {
-    	log.debug("================================================");
-    	log.debug("== AdminCommonLoginController.login ============");
-    	log.debug("================================================");
+    	log.debug("============================================================");
+    	log.debug("== AdminCommonLoginController.login ========================");
+    	log.debug("============================================================");
     	
         return "/admin/common/login/login";
 	}
@@ -49,26 +49,27 @@ public class AdminCommonLoginController {
    	 */
 	@RequestMapping(value={"/admin/common/login/loginProc.do"})
    	public String loginProc(HttpServletRequest request, ModelMap model, @CommandMap Map commandMap) {
-       	log.debug("================================================");
-       	log.debug("== AdminCommonLoginController.loginProc ========");
-       	log.debug("================================================");
+       	log.debug("============================================================");
+       	log.debug("== AdminCommonLoginController.loginProc ====================");
+    	log.debug("============================================================");
        	
        	String returnPage = "";
        	
        	try {
        		Map userMap = commonUserService.selectUser(commandMap);
-
-       		log.debug("============================================");
-       		log.debug("============================================");
-       		log.debug("== userEmail	: " + userMap.get("userEmail")	);
+       		
+        	log.debug("============================================================");
+        	log.debug("============================================================");
+        	log.debug("== userEmail	: " + userMap.get("userEmail")	);
        		log.debug("== userName	: " + userMap.get("userName")	);
        		log.debug("== zipcode	: " + userMap.get("zipcode")	);
        		log.debug("== addr1		: " + userMap.get("addr1")		);
        		log.debug("== addr2		: " + userMap.get("addr2")		);
        		log.debug("== phone		: " + userMap.get("phone")		);
        		log.debug("== userClass	: " + userMap.get("userClass")	);
-       		log.debug("============================================");
-       		log.debug("============================================");
+        	log.debug("============================================================");
+        	log.debug("============================================================");
+        	
        		
    			if ("".equals(userMap.get("userEmail").toString()) || userMap.get("userEmail").toString() == null) {
        	        model.addAttribute("resultMsg",	"로그인 정보가 없습니다.");
@@ -83,10 +84,10 @@ public class AdminCommonLoginController {
        			}
        		}
 		} catch (Exception e) {
-	    	log.debug("================================================");
-	       	log.debug("== AdminCommonLoginController.loginProc ========");
+	    	log.debug("============================================================");
+	       	log.debug("== AdminCommonLoginController.loginProc ====================");
 	    	log.debug("== Exception : " + e);
-	    	log.debug("================================================");
+	    	log.debug("============================================================");
 	    	
 			model.addAttribute("resultMsg",	"오류가 발생하였습니다.");
 			

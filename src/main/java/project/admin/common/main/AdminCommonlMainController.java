@@ -31,10 +31,10 @@ public class AdminCommonlMainController {
    	 */
 	@RequestMapping(value={"/admin/common/main/main.do"})
    	public String main(HttpServletRequest request, ModelMap model, @CommandMap Map commandMap) {
-       	log.debug("================================================");
-       	log.debug("== AdminCommonlMainController.main =============");
-       	log.debug("================================================");
-       	
+		log.debug("============================================================");
+    	log.debug("== AdminCommonlMainController.main =========================");
+    	log.debug("============================================================");
+    	
        	return "/admin/common/main/main";
    	}
 }

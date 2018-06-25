@@ -67,7 +67,7 @@ public class CommonCodeServiceImpl extends AbstractServiceImpl implements Common
 	 * @throws	Exception
 	 */
 	public Map selectCommonCode(Map commandMap) throws Exception {
-		return (Map) commonDAO.selectByPk ("commonCode.selectCommonCode", commandMap);
+		return (Map) commonDAO.select ("commonCode.selectCommonCodeDetail", commandMap);
 	}
 	
 	/**
@@ -78,7 +78,7 @@ public class CommonCodeServiceImpl extends AbstractServiceImpl implements Common
 	 * @throws	Exception
 	 */
 	public List selectCommonCodeList(Map commandMap) throws Exception {
-		return (List) commonDAO.select ("commonCode.selectCommonCodeList", commandMap);
+		return commonDAO.selectList ("commonCode.selectCommonCodeList", commandMap);
 	}
 	
 	/**
@@ -89,6 +89,6 @@ public class CommonCodeServiceImpl extends AbstractServiceImpl implements Common
 	 * @throws	Exception
 	 */
 	public int selectCodeCnt(Map commandMap) throws Exception {
-		return (int) commonDAO.select ("commonCode.selectCommonCodeList", commandMap);
+		return (int) commonDAO.select ("commonCode.selectCommonCodeCnt", commandMap);
 	}
 }

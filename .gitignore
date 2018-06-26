@@ -1,7 +1,11 @@
-# 
+# Setting Files
 *.bak
 *.war
 *.class
+.classpath
+.project
+.springBeans
+context-datasource.xml
 
 # Windows
 Thumbs.db
@@ -10,9 +14,5 @@ Desktop.ini
 # OSX
 .DS_Store
 
-# Directories #
+# Directories
 target/
-.classpath
-.project
-.springBeans
-context-datasource.xml

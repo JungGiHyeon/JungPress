@@ -1,6 +1,18 @@
+# 
 *.bak
+*.war
+*.class
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# OSX
+.DS_Store
+
+# Directories #
+target/
 .classpath
 .project
 .springBeans
-.DS_Store
 context-datasource.xml
